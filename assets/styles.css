@@ -127,13 +127,9 @@ p{margin:0;text-wrap:pretty}
 .booking-slot{position:relative;min-height:620px;display:flex;flex-direction:column;justify-content:flex-start}
 .booking-frame{position:relative;z-index:1;width:100%;min-height:620px;border:none;overflow:hidden;display:block;background:var(--panel)}
 .booking-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:14.5px;line-height:1.6;color:var(--dim);border:1px solid var(--rule);background:var(--paper)}
-form{display:flex;flex-direction:column;gap:20px}
-label{display:flex;flex-direction:column;gap:8px}
-label span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6E7684}
-input,textarea{font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:12px 14px;outline:none;width:100%}
-textarea{line-height:1.5;resize:vertical}
-input:focus,textarea:focus{border-color:var(--navy);background:#fff}
-form .btn{align-self:flex-start}
+.form-slot{position:relative;min-height:620px}
+.form-frame{position:relative;z-index:1;width:100%;min-height:620px;height:620px;border:none;display:block;background:var(--panel)}
+.form-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:14.5px;line-height:1.6;color:var(--dim);border:1px solid var(--rule);background:var(--paper)}
 .tiles{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr) minmax(0,.95fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1px}
 .tile{background:var(--paper);padding:26px 30px;color:var(--ink)}
 a.tile:hover{background:var(--tint);color:var(--navy)}
