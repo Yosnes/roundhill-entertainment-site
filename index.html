@@ -226,14 +226,27 @@
             <h3>Or send a note</h3>
             <p class="mono">Reply in 1 day</p>
           </div>
-          <!-- Wire this to a GHL form/webhook, or swap the whole form for GHL's form embed. -->
-          <form method="post" action="#" novalidate>
-            <label><span>Name</span><input type="text" name="name" autocomplete="name"></label>
-            <label><span>Business</span><input type="text" name="business" autocomplete="organization"></label>
-            <label><span>Phone</span><input type="tel" name="phone" autocomplete="tel"></label>
-            <label><span>What is eating your week?</span><textarea name="problem" rows="4"></textarea></label>
-            <button class="btn" type="submit">Send it over</button>
-          </form>
+          <div class="form-slot">
+            <p class="form-fallback"><span>Form loading. If it does not appear, email <a href="mailto:hello@roundhillentertainment.com">hello@roundhillentertainment.com</a> or call <a href="tel:+18189276334">(818) 927-6334</a>.</span></p>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/7srPJOxQ9T5cpl2Tx3S0"
+              class="form-frame"
+              id="inline-7srPJOxQ9T5cpl2Tx3S0"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Form 0"
+              data-height="900"
+              data-layout-iframe-id="inline-7srPJOxQ9T5cpl2Tx3S0"
+              data-form-id="7srPJOxQ9T5cpl2Tx3S0"
+              data-cookie-consent="true"
+              data-cookie-consent-provider="auto"
+              title="Contact form"></iframe>
+          </div>
         </div>
       </div>
       <div class="tiles">
