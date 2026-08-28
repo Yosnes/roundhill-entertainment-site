@@ -120,7 +120,9 @@ p{margin:0;text-wrap:pretty}
 .contact-head{max-width:30em;padding:68px 0 40px}
 .contact-head h2{font-size:clamp(30px,3.4vw,48px);line-height:1.08;letter-spacing:-.025em;margin:20px 0 22px}
 .contact-head p:not([class]){font-size:17.5px;line-height:1.65;color:var(--dim)}
-.panels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);align-items:stretch}
+.widget-slot{min-height:592px}
+.widget-slot chat-widget{display:block;width:100%}
 .panel{background:var(--panel);padding:34px 38px 38px}
 .panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-bottom:22px;border-bottom:1px solid var(--hair);margin-bottom:26px}
 .panel-head h3{font-size:23px;line-height:1.2}
