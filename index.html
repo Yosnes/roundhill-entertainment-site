@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Round Hill Consulting builds voice AI assistants, field assistants, site avatars and automation for small businesses, so owners get their week back.">
-  <meta name="theme-color" content="#0F3057">
+  <meta name="theme-color" content="#0B2340">
   <title>Round Hill Consulting | AI for small business</title>
   <link rel="canonical" href="https://roundhillentertainment.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +29,7 @@
       <a href="#approach">How it works</a>
       <a href="#work">Results</a>
       <a href="#firm">The firm</a>
+      <a href="diagnostic/">Diagnostic</a>
       <a class="nav-cta" href="#contact">Book a call</a>
     </nav>
   </div>
@@ -36,32 +37,58 @@
 
 <main id="main">
 
-  <section class="hero">
+  <section class="on-navy hero">
+    <div class="dots" aria-hidden="true"></div>
+    <div class="glow tr" aria-hidden="true"></div>
     <div class="hero-inner">
       <div>
-        <p class="hero-flag"><span class="dot" aria-hidden="true"></span><span>Round Hill Consulting &middot; Technology &amp; innovation</span></p>
+        <p class="hero-flag"><span class="dot" aria-hidden="true"></span><span>Working AI systems for small business</span></p>
         <h1>Let AI handle the busywork. Spend your time moving your business forward.</h1>
         <p class="hero-lede">You did not start this business to sit on hold with a supplier or type notes into a spreadsheet at nine at night. We build working AI systems that take that work off you, so the hours you have go into the part of the job only you can do.</p>
         <div class="actions">
-          <a class="btn" href="#contact">Book a 30-minute call</a>
+          <a class="btn mint" href="#contact">Book a 30-minute call</a>
           <a class="link-under" href="#services">See what we build</a>
         </div>
+        <div class="hero-facts">
+          <div><b>2&ndash;3 wks</b><span>Voice assistant live</span></div>
+          <div><b>Fixed</b><span>Price, agreed up front</span></div>
+          <div><b>Yours</b><span>We build it, you own it</span></div>
+        </div>
       </div>
-      <dl class="spec">
-        <p class="spec-title">What to expect</p>
-        <div class="spec-row"><dt>First call</dt><dd>30 minutes, free</dd></div>
-        <div class="spec-row"><dt>Voice assistant live</dt><dd>2&ndash;3 weeks</dd></div>
-        <div class="spec-row"><dt>Who runs it</dt><dd>We build it, you own it</dd></div>
-        <div class="spec-row"><dt>Best fit</dt><dd>2&ndash;50 employees</dd></div>
-        <p class="spec-note">You will never get a bill from us for a slide deck.</p>
-      </dl>
+
+      <div class="tx" aria-label="Example of the voice assistant handling a call">
+        <div class="tx-head">
+          <div class="tx-live"><i aria-hidden="true"></i><span id="txLabel">Incoming call &middot; Tue 9:14 AM</span></div>
+          <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="tx-body" id="txBody" aria-live="off"></div>
+        <div class="tx-actions" id="txActions"></div>
+        <p class="tx-note" id="txNote">Owner is on a roof. He finds out at lunch.</p>
+      </div>
     </div>
   </section>
 
   <section class="band">
     <div class="band-inner">
-      <h2>Your best hours are going to the wrong work.</h2>
-      <p>The phone rings while you are up a ladder. The supplier needs a call to confirm the order. The customer from Thursday is still waiting on a quote. None of it is the work you are good at, and all of it lands on the person who can least afford the time. Hand that layer to a system that never forgets and never goes to voicemail, and your day gets its judgment back.</p>
+      <div class="reveal">
+        <h2>Your best hours are going to the wrong work.</h2>
+        <p>The phone rings while you are up a ladder. The supplier needs a call to confirm the order. The customer from Thursday is still waiting on a quote. None of it is the work you are good at, and all of it lands on the person who can least afford the time. Hand that layer to a system that never forgets and never goes to voicemail, and your day gets its judgment back.</p>
+      </div>
+      <div class="week reveal d1" id="week">
+        <div class="week-head"><p id="weekTitle">A typical week</p><p id="weekHours">&asymp; 20 hrs on admin</p></div>
+        <div class="week-cols">
+          <div class="week-col"><i class="adm"></i><i class="wrk"></i><i class="ai"></i><span>Mon</span></div>
+          <div class="week-col"><i class="adm"></i><i class="wrk"></i><i class="ai"></i><span>Tue</span></div>
+          <div class="week-col"><i class="adm"></i><i class="wrk"></i><i class="ai"></i><span>Wed</span></div>
+          <div class="week-col"><i class="adm"></i><i class="wrk"></i><i class="ai"></i><span>Thu</span></div>
+          <div class="week-col"><i class="adm"></i><i class="wrk"></i><i class="ai"></i><span>Fri</span></div>
+        </div>
+        <div class="week-legend">
+          <span><i style="background:#C9CDD6" aria-hidden="true"></i>Admin, phones, chasing</span>
+          <span><i style="background:#0F3057" aria-hidden="true"></i>The work only you can do</span>
+          <span><i style="background:#5EE6A8" aria-hidden="true"></i>Handed to AI</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -69,115 +96,129 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="services-title">Examples of what we build</h2>
-        <p class="eyebrow">Five of many</p>
+        <p class="eyebrow">Four of many</p>
       </div>
-    </div>
-    <div class="wrap pad-b">
-      <div class="grid-2">
-        <article class="card">
-          <p class="card-num">01</p>
-          <h3>Voice AI assistant</h3>
+
+      <article class="svc">
+        <div class="svc-text reveal">
+          <p class="svc-num">01 &middot; Voice AI assistant</p>
+          <h3>Every call answered. Every job on the calendar.</h3>
           <p>A contractor is on a roof when the phone rings. The assistant answers, books the estimate into the calendar, creates the new contact in the CRM, and texts the customer a confirmation. Follow-up messages go out on their own. He finds out at lunch, with the job already on the schedule.</p>
-          <div class="tags"><span class="tag">Answers every call</span><span class="tag">Books appointments</span><span class="tag">Creates contacts</span><span class="tag">SMS confirmation &amp; follow-up</span></div>
-        </article>
-        <article class="card">
-          <p class="card-num">02</p>
-          <h3>AI field assistant</h3>
+          <div class="tags"><span class="tag">Answers every call</span><span class="tag">Books appointments</span><span class="tag">Creates contacts</span><span class="tag">SMS confirmation</span></div>
+        </div>
+        <div class="shot reveal d1" aria-hidden="true">
+          <div class="cal"><div>MON</div><div>TUE</div><div>WED</div><div class="on">THU 10:00<b>Estimate &middot; Dana M.</b></div><div>FRI</div></div>
+          <div class="crm"><div><p class="lbl">New contact &middot; CRM</p><p>Dana Morales &middot; 412 Alder St &middot; leak over garage</p></div><span class="ok">&#10003;</span></div>
+          <div class="sms"><div>Hi Dana, this is Round Hill Roofing. You&rsquo;re confirmed for Thursday at 10:00 AM at 412 Alder St. Reply here if anything changes.</div></div>
+          <p class="dimlbl">Sent 9:16 AM &middot; owner notified at lunch</p>
+        </div>
+      </article>
+
+      <article class="svc flip">
+        <div class="svc-text reveal">
+          <p class="svc-num">02 &middot; AI field assistant</p>
+          <h3>Say it once in the truck. It makes the calls.</h3>
           <p>It logs job progress as you talk to it, then acts on it. Calls the electrician to get Thursday held, calls the supplier to put the material order in, and tells you what it did. The kind of work that used to cost you an hour of phone calls in the truck.</p>
           <div class="tags"><span class="tag">Logs job progress</span><span class="tag">Calls subs &amp; vendors</span><span class="tag">Orders materials</span></div>
-        </article>
-        <article class="card">
-          <p class="card-num">03</p>
-          <h3>An AI avatar on your site</h3>
-          <p>Not a chat box in the corner. An avatar that speaks for you &mdash; answers what you charge, how soon you can start, whether you cover that town &mdash; and hands you the visitors worth a callback. The website stops being a brochure and starts holding conversations.</p>
+        </div>
+        <div class="shot reveal d1" aria-hidden="true">
+          <div class="memo">
+            <span class="you">YOU</span>
+            <div class="bubble"><div class="wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>&ldquo;Framing&rsquo;s done on the Miller job. Get the electrician for Thursday and put the drywall order in.&rdquo;</div>
+          </div>
+          <div class="tasks">
+            <div class="task"><b>&#9675;</b><p>Logged: framing complete on Miller job</p><span>queued</span></div>
+            <div class="task"><b>&#9675;</b><p>Called Ortiz Electric, Thursday held</p><span>queued</span></div>
+            <div class="task"><b>&#9675;</b><p>Drywall order placed with BuildCo</p><span>queued</span></div>
+            <div class="task"><b>&#9675;</b><p>Summary texted to you</p><span>queued</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc-text reveal">
+          <p class="svc-num">03 &middot; AI avatar on your site</p>
+          <h3>Your website stops being a brochure and starts holding conversations.</h3>
+          <p>Not a chat box in the corner. An avatar that speaks for you, answers common questions, how soon you can start, whether you cover that town, and qualifies your visitors as real prospects.</p>
           <div class="tags"><span class="tag">Speaks on your behalf</span><span class="tag">Trained on your business</span><span class="tag">Qualifies visitors</span></div>
-        </article>
-        <article class="card">
-          <p class="card-num">04</p>
-          <h3>A project dashboard that updates itself</h3>
-          <p>Send a text or say it out loud &mdash; &ldquo;framing done on the Miller job, inspection Tuesday&rdquo; &mdash; and every project moves forward on the board. You get one screen showing where everything stands, without an evening spent updating it.</p>
+        </div>
+        <div class="browser reveal d1">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>yourbusiness.com</span></div>
+          <div class="avatar-row">
+            <div class="avatar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><img src="assets/avatar-anita.gif" alt="AI avatar speaking on behalf of the business" width="96" height="96"></div>
+            <div class="convo">
+              <div class="q">Do you cover Pasadena, and what does a re-roof usually run?</div>
+              <div class="a">We do. Most re-roofs there land between $14k and $22k depending on pitch and material, and we can usually start within two weeks. Want me to set up a free estimate?</div>
+              <span class="flag"><i aria-hidden="true"></i>Worth a callback &middot; sent to you</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc flip">
+        <div class="svc-text reveal">
+          <p class="svc-num">04 &middot; Self-updating project dashboard</p>
+          <h3>One screen that shows where everything stands. Nobody types into it.</h3>
+          <p>Send a text or say it out loud, &ldquo;framing done on the Miller job, inspection Tuesday&rdquo;, and every project moves forward on the board. You get one screen showing where everything stands, without an evening spent updating it.</p>
           <div class="tags"><span class="tag">Update by text or voice</span><span class="tag">Live job status</span><span class="tag">No manual entry</span></div>
-        </article>
-        <article class="card card-wide">
-          <div>
-            <p class="card-num">05</p>
-            <h3>Whatever is eating your Thursday</h3>
-            <p>Most of what we build starts as a complaint, not a product. Tell us the task you dread and we will look at whether AI can do it, do part of it, or leave it alone. If it is not worth automating, you will hear that too.</p>
+        </div>
+        <div class="shot reveal d1" aria-hidden="true">
+          <div class="dash-head"><p class="lbl">Active jobs &middot; 4</p><p class="stamp" id="dashStamp">Updated from text &middot; just now</p></div>
+          <div class="tiles-grid">
+            <div class="jtile"><b>Miller residence</b><div class="bar"><i style="width:40%"></i></div><p class="stage">Framing in progress</p><p class="next">Next: framing</p></div>
+            <div class="jtile"><b>Ortiz kitchen</b><div class="bar"><i style="width:15%"></i></div><p class="stage">Permit pending</p><p class="next">Next: city review</p></div>
+            <div class="jtile"><b>Kim re-roof</b><div class="bar"><i style="width:60%"></i></div><p class="stage">Tear-off complete</p><p class="next">Next: underlayment</p></div>
+            <div class="jtile"><b>Patel addition</b><div class="bar"><i style="width:5%"></i></div><p class="stage">Quote sent</p><p class="next">Follow-up Fri</p></div>
           </div>
-          <div class="list-rows">
-            <div class="list-row"><span>Quotes and estimates written for you</span><span>Hours back</span></div>
-            <div class="list-row"><span>Invoices and receipts keyed in by themselves</span><span>Hours back</span></div>
-            <div class="list-row"><span>Email and inbox triage, sorted before you open it</span><span>Daily</span></div>
-            <div class="list-row"><span>Payroll, timesheets, and compliance paperwork</span><span>Weekly</span></div>
-            <div class="list-row"><span>The month-end report nobody wants to build</span><span>Monthly</span></div>
-          </div>
-        </article>
-      </div>
+        </div>
+      </article>
+
+      <article class="svc last">
+        <div class="svc-text reveal">
+          <p class="svc-num">05 &middot; Whatever is eating your Thursday</p>
+          <h3>Most of what we build starts as a complaint, not a product.</h3>
+          <p>Tell us the task you dread and we will look at whether AI can do it, do part of it, or leave it alone. If it is not worth automating, you will hear that too.</p>
+        </div>
+        <div class="list-rows reveal d1">
+          <div class="list-row"><span>Quotes and estimates written for you</span><span>Hours back</span></div>
+          <div class="list-row"><span>Invoices and receipts keyed in by themselves</span><span>Hours back</span></div>
+          <div class="list-row"><span>Email and inbox triage, sorted before you open it</span><span>Daily</span></div>
+          <div class="list-row"><span>Payroll, timesheets, and compliance paperwork</span><span>Weekly</span></div>
+          <div class="list-row"><span>The month-end report nobody wants to build</span><span>Monthly</span></div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section alt" id="approach" aria-labelledby="approach-title">
-    <div class="wrap">
-      <div class="split">
+  <section class="on-navy" id="approach" aria-labelledby="approach-title">
+    <div class="approach-inner">
+      <div class="approach-head">
         <div>
           <p class="eyebrow">How it works</p>
-          <h2 id="approach-title">One thing at a time, starting with the loudest.</h2>
-          <p class="split-lede">You are not signing up for a transformation. You are fixing the thing that costs you the most, then deciding whether to fix the next one.</p>
+          <h2 class="h2" id="approach-title">One thing at a time, starting with the loudest.</h2>
         </div>
-        <ol class="steps">
-          <li>
-            <span class="step-num">01</span>
-            <div>
-              <h3>We walk through your week</h3>
-              <p>A call and a look at how work actually moves through your business. You leave with a short list of what AI can take off your plate, what each one costs, and what it saves. Free.</p>
-            </div>
-            <span class="step-when">Week 1</span>
-          </li>
-          <li>
-            <span class="step-num">02</span>
-            <div>
-              <h3>We build the first one</h3>
-              <p>We build it, test it against real calls and real customers, and sit with you while you use it. Fixed price, agreed before we start, so there is no meter running.</p>
-            </div>
-            <span class="step-when">2&ndash;3 weeks</span>
-          </li>
-          <li>
-            <span class="step-num">03</span>
-            <div>
-              <h3>You keep it, we stay reachable</h3>
-              <p>The system is yours, in your accounts, documented in plain language. We handle upkeep on a small monthly plan if you want it, and add the next piece when you are ready.</p>
-            </div>
-            <span class="step-when">Ongoing</span>
-          </li>
-        </ol>
+        <p>You are not signing up for a transformation. You are fixing the thing that costs you the most, then deciding whether to fix the next one.</p>
       </div>
+      <ol class="steps">
+        <li class="reveal"><div class="step-top"><b>01</b><span>Week 1</span></div><h3>We walk through your week</h3><p>A call and a look at how work actually moves through your business. You leave with a short list of what AI can take off your plate, what each one costs, and what it saves. Free.</p></li>
+        <li class="reveal d1"><div class="step-top"><b>02</b><span>2&ndash;3 weeks</span></div><h3>We build the first one</h3><p>We build it, test it against real calls and real customers, and sit with you while you use it. Fixed price, agreed before we start, so there is no meter running.</p></li>
+        <li class="reveal d2"><div class="step-top"><b>03</b><span>Ongoing</span></div><h3>You keep it, we stay reachable</h3><p>The system is yours, in your accounts, documented in plain language. We handle upkeep on a small monthly plan if you want it, and add the next piece when you are ready.</p></li>
+      </ol>
     </div>
   </section>
 
   <section class="section" id="work" aria-labelledby="work-title">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" style="padding-bottom:36px">
         <h2 id="work-title">What changed for them</h2>
         <p class="eyebrow">Client names withheld</p>
       </div>
     </div>
     <div class="wrap pad-b">
-      <div class="grid-3">
-        <div class="metric">
-          <p class="metric-fig">0</p>
-          <p>missed calls at a three-van plumbing company after the voice assistant went live</p>
-          <p class="mono">Voice AI &middot; 3 weeks</p>
-        </div>
-        <div class="metric">
-          <p class="metric-fig">11 hrs</p>
-          <p>a week back for an owner who was quoting and invoicing by hand every evening</p>
-          <p class="mono">Automation &middot; 4 weeks</p>
-        </div>
-        <div class="metric">
-          <p class="metric-fig">4 nights</p>
-          <p>a week a remodeling firm stopped spending on job notes, once the dashboard updated itself</p>
-          <p class="mono">Project dashboard &middot; 5 weeks</p>
-        </div>
+      <div class="grid-3" id="metrics">
+        <div class="metric"><p class="metric-fig"><span data-count="0">0</span></p><p>missed calls at a three-van plumbing company after the voice assistant went live</p><p class="mono">Voice AI &middot; 3 weeks</p></div>
+        <div class="metric"><p class="metric-fig"><span data-count="11">0</span> hrs</p><p>a week back for an owner who was quoting and invoicing by hand every evening</p><p class="mono">Automation &middot; 4 weeks</p></div>
+        <div class="metric"><p class="metric-fig"><span data-count="4">0</span> nights</p><p>a week a remodeling firm stopped spending on job notes, once the dashboard updated itself</p><p class="mono">Project dashboard &middot; 5 weeks</p></div>
       </div>
     </div>
   </section>
@@ -185,8 +226,8 @@
   <section class="section alt" id="firm" aria-labelledby="firm-title">
     <div class="wrap">
       <div class="firm">
-        <div class="portrait"><img src="assets/founder-portrait.png" alt="Founder, Round Hill Consulting" width="789" height="821"></div>
-        <div>
+        <div class="portrait reveal"><img src="assets/founder-portrait.png" alt="Founder, Round Hill Consulting" width="789" height="821"></div>
+        <div class="reveal d1">
           <p class="eyebrow">The firm</p>
           <h2 id="firm-title">Small on purpose. The person who scopes the work is the person who builds it.</h2>
           <p>Round Hill Consulting is the technology practice of Round Hill Entertainment LLC. We work with a handful of businesses at a time, which means you deal with the person doing the work rather than an account manager passing messages along.</p>
@@ -198,6 +239,46 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="on-navy deep" id="diagnostic" aria-labelledby="dx-promo-t">
+    <div class="glow bl" aria-hidden="true"></div>
+    <div class="promo-inner">
+      <div class="reveal">
+        <p class="eyebrow">Free &middot; five minutes</p>
+        <h2 class="h2" id="dx-promo-t">Not sure where to start? Find out where your week is going.</h2>
+        <p>Twenty-four questions across six parts of your operation. You get a score, the hours you are losing to manual work, and the one automation most likely to give that time back. No call required to see it.</p>
+        <div class="actions">
+          <a class="btn mint" href="diagnostic/">Take the diagnostic</a>
+          <a class="link-under" href="#contact">Or book a call instead</a>
+        </div>
+      </div>
+      <div class="report reveal d1" aria-hidden="true">
+        <div class="report-head"><p class="lbl">Sample report &middot; operations map</p><b>62<small> /100</small></b></div>
+        <div class="area"><p>Lead response</p><div class="trk"><i class="lo" style="--w:34%"></i></div><span>34</span></div>
+        <div class="area"><p>Scheduling</p><div class="trk"><i class="mid" style="--w:58%"></i></div><span>58</span></div>
+        <div class="area"><p>Customer updates</p><div class="trk"><i class="mid" style="--w:61%"></i></div><span>61</span></div>
+        <div class="area"><p>Job handoffs</p><div class="trk"><i class="hi" style="--w:72%"></i></div><span>72</span></div>
+        <div class="area"><p>Invoicing</p><div class="trk"><i class="mid" style="--w:66%"></i></div><span>66</span></div>
+        <div class="area"><p>Admin &amp; docs</p><div class="trk"><i class="hi" style="--w:80%"></i></div><span>80</span></div>
+        <p class="report-foot">Biggest leak: new lead response &middot; &asymp; 9 hrs / week</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="news" aria-labelledby="news-title">
+    <div class="news-inner">
+      <div>
+        <p class="eyebrow">One note a month</p>
+        <h2 id="news-title">What AI can actually do for a small business this month. No hype, one email.</h2>
+      </div>
+      <!-- Set action="" to your GHL form / webhook endpoint; without it the button just confirms locally. -->
+      <form id="newsForm" method="post">
+        <input type="email" name="email" required placeholder="you@yourbusiness.com" aria-label="Email address" autocomplete="email">
+        <button type="submit">Subscribe</button>
+        <small>Unsubscribe any time. We never share your address.</small>
+      </form>
     </div>
   </section>
 
@@ -221,7 +302,7 @@
             src="https://api.leadconnectorhq.com/widget/booking/9N9iA9ofsY9cruMr47jI"
             title="Book a 30-minute call with Round Hill Consulting"
             allow="payment"
-            style="width:100%;height:700px;border:none;display:block;background:#FBFAF7"></iframe>
+            style="width:100%;height:592px;border:none;display:block;background:#FBFAF7"></iframe>
           </div>
         </div>
         <div class="panel">
@@ -237,7 +318,7 @@
       <div class="tiles">
         <a class="tile" href="tel:+19714144483">
           <p class="mono">Call us</p>
-          <p class="tile-val nowrap">213-221-6778</p>
+          <p class="tile-val nowrap">(971) 414-4483</p>
         </a>
         <a class="tile" href="mailto:hello@roundhillentertainment.com">
           <p class="mono">Email</p>
@@ -268,5 +349,6 @@
     <span class="footer-legal">&copy; 2026 &middot; All rights reserved</span>
   </div>
 </footer>
+<script src="assets/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A five-minute diagnostic for small business owners: find the biggest time leak in your operation and the first AI workflow worth building.">
+  <meta name="theme-color" content="#0B2340">
+  <title>Where Your Week Goes | Round Hill Consulting</title>
+  <link rel="canonical" href="https://roundhillentertainment.com/diagnostic/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/diagnostic.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Round Hill Consulting home">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <span class="brand-name">Round Hill Consulting</span>
+        <span class="brand-sub">AI for small business</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="../index.html#services">What we build</a>
+      <a href="../index.html#approach">How it works</a>
+      <a href="../index.html#work">Results</a>
+      <a href="../diagnostic/">Diagnostic</a>
+      <a class="nav-cta" href="../index.html#contact">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTRO ============ -->
+  <section class="dx-hero on-navy" id="dxIntro">
+    <div class="dots" aria-hidden="true"></div>
+    <div class="glow tr" aria-hidden="true"></div>
+    <div class="dx-hero-inner">
+      <div>
+        <p class="eyebrow">Five minutes &middot; 24 questions &middot; no cost</p>
+        <h1>Where your week goes, and the first thing worth automating.</h1>
+        <p class="dx-lede">Most owners know they are losing hours somewhere. Fewer can say exactly where, or which fix would give the most back. This walks through six parts of your operation and tells you plainly what is holding up, what is exposed, and the one AI workflow most likely to free up real time.</p>
+
+        <div class="dx-resume" id="dxIntroResume" hidden>
+          <p id="dxResumeNote">You have answers saved from last time.</p>
+          <button class="dx-linkbtn" type="button" id="dxResume">Pick up where I left off</button>
+        </div>
+
+        <div class="actions">
+          <button class="btn mint" type="button" id="dxStart">Start the diagnostic</button>
+          <a class="link-under" href="../index.html#contact">Rather just talk to someone</a>
+        </div>
+      </div>
+
+      <div>
+        <ul class="dx-get">
+          <li><span>01</span>Your AI Operations Score, out of 100</li>
+          <li><span>02</span>A score for each of six operational areas</li>
+          <li><span>03</span>Your biggest time leak, in hours per week</li>
+          <li><span>04</span>The highest-value first automation for your business</li>
+          <li><span>05</span>An ROI calculator you can run on your own numbers</li>
+        </ul>
+        <p class="dx-fineprint">There are no wrong answers, and nothing here is a test. The point is to see the business as it actually runs this week, not as it should run.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="dx-quizwrap" id="dxQuiz" hidden>
+    <div class="dx-prog">
+      <span class="dx-progtrack"><span class="dx-progfill" id="dxProgFill"></span></span>
+      <span class="dx-prognum" id="dxProgNum">1 / 24</span>
+    </div>
+    <div id="dxQCard">
+      <p class="dx-part" id="dxPart">Part 1</p>
+      <h2 class="dx-qtext" id="dxQText">&nbsp;</h2>
+      <div class="dx-opts" id="dxOpts" role="group" aria-label="Answer options"></div>
+      <div class="dx-nav">
+        <button type="button" id="dxBack">&larr; Back</button>
+        <button type="button" id="dxSkip">Skip this one</button>
+        <span class="dx-hint">Press 1&ndash;5 to answer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="dxResults" hidden>
+
+    <div class="dx-rwrap">
+      <div class="dx-verdict">
+        <div class="dx-gauge">
+          <svg viewBox="0 0 280 160" role="img" aria-labelledby="dxGaugeTitle">
+            <title id="dxGaugeTitle">Your AI Operations Score</title>
+            <path d="M 20 140 A 120 120 0 0 1 260 140" fill="none" stroke="#E7E5DE" stroke-width="14"/>
+            <path d="M 20 140 A 120 120 0 0 1 260 140" fill="none" stroke="#A24A2E" stroke-width="14" stroke-dasharray="147 377" opacity=".16"/>
+            <path d="M 20 140 A 120 120 0 0 1 260 140" fill="none" stroke="#B07C28" stroke-width="14" stroke-dasharray="113 377" stroke-dashoffset="-147" opacity=".2"/>
+            <path d="M 20 140 A 120 120 0 0 1 260 140" fill="none" stroke="#2F6F4F" stroke-width="14" stroke-dasharray="117 377" stroke-dashoffset="-260" opacity=".18"/>
+            <path id="dxArc" d="M 20 140 A 120 120 0 0 1 260 140" fill="none" stroke="#B07C28" stroke-width="14" stroke-dasharray="0 377" stroke-linecap="butt"/>
+          </svg>
+          <div class="dx-gnum">
+            <b id="dxScore">0</b>
+            <i>out of 100</i>
+          </div>
+        </div>
+        <div>
+          <span class="dx-band-label is-exposed" id="dxBandLabel">Exposed</span>
+          <h2 id="dxVerdictH">&nbsp;</h2>
+          <p id="dxVerdictP">&nbsp;</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="metric">
+          <p class="mono">Time leaking now</p>
+          <p class="metric-fig" id="dxLeak">&nbsp;</p>
+          <p>Hours a week going into manual admin, chasing and coordination across you and the team.</p>
+        </div>
+        <div class="metric">
+          <p class="mono">Best first target</p>
+          <p class="metric-fig" id="dxTarget" style="font-size:30px">&nbsp;</p>
+          <p>The area where a single workflow would remove the most repeated effort.</p>
+        </div>
+        <div class="metric">
+          <p class="mono">Recoverable capacity</p>
+          <p class="metric-fig" id="dxCapacity">&nbsp;</p>
+          <p>Per week, on expected assumptions. You can adjust these in the calculator below.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- gate -->
+    <div class="dx-gate" id="dxLocked">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="dx-gate-inner">
+        <div>
+          <h2>Get the full report, including your ROI numbers</h2>
+          <p>You have your score. The rest of the report goes into where the time is going and what it is worth. Tell us where to send it and it opens straight away.</p>
+          <ul class="dx-locklist">
+            <li>Your six area scores, with what each one means</li>
+            <li>An impact-versus-effort map of five automation options</li>
+            <li>Weekly, monthly and annual capacity figures</li>
+            <li>A calculator you can run on your own hourly rates and job values</li>
+          </ul>
+        </div>
+        <form class="dx-form" id="dxGate" novalidate>
+          <div class="dx-field">
+            <label for="gName">Your name</label>
+            <input id="gName" name="name_" type="text" autocomplete="name" required>
+          </div>
+          <div class="dx-field">
+            <label for="gEmail">Email</label>
+            <input id="gEmail" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="dx-two">
+            <div class="dx-field">
+              <label for="gCompany">Business</label>
+              <input id="gCompany" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="dx-field">
+              <label for="gPhone">Phone <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+              <input id="gPhone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <label class="dx-check">
+            <input type="checkbox" name="consent">
+            <span>If you have given a phone number, tick here to agree to receive text messages from Round Hill Consulting about your report. Message and data rates may apply. Reply STOP to opt out. See our <a href="../sms-terms/">SMS terms</a>.</span>
+          </label>
+          <p class="dx-msg" id="dxGateMsg"></p>
+          <button class="btn" type="submit">Open my full report</button>
+          <p class="dx-fineprint">We use this to send your report and, if it is useful, to follow up once. No list, no drip sequence you did not ask for.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- full report -->
+    <div id="dxFull" hidden>
+
+      <div class="dx-rwrap">
+        <section class="dx-sec">
+          <div class="dx-sec-head">
+            <p class="eyebrow">Your operations map</p>
+            <h2>Where the business is holding up, and where it is not</h2>
+            <p>Six areas, each scored out of 100 from your answers. Anything in amber or red is where effort is leaking out of the week.</p>
+          </div>
+          <div id="dxMap"></div>
+        </section>
+
+        <section class="dx-sec">
+          <div class="dx-sec-head">
+            <p class="eyebrow">Your primary insight</p>
+            <h2 id="dxInsightH">&nbsp;</h2>
+            <p id="dxInsightP">&nbsp;</p>
+          </div>
+          <div class="dx-matrix">
+            <div class="dx-axis-y">Business impact</div>
+            <div class="dx-quad is-start">
+              <p class="dx-quadlab">High impact &middot; low effort &middot; start here</p>
+              <span class="dx-chip" data-opp="leadresp">New lead response and follow-up</span>
+            </div>
+            <div class="dx-quad">
+              <p class="dx-quadlab">High impact &middot; medium effort</p>
+              <span class="dx-chip" data-opp="updates">Customer status updates</span>
+              <span class="dx-chip" data-opp="handoffs">Internal job handoffs</span>
+            </div>
+            <div class="dx-quad">
+              <p class="dx-quadlab">Medium impact &middot; low effort</p>
+              <span class="dx-chip" data-opp="invoices">Invoice and payment reminders</span>
+            </div>
+            <div class="dx-quad">
+              <p class="dx-quadlab">Medium impact &middot; medium effort</p>
+              <span class="dx-chip" data-opp="docs">Document and admin flow</span>
+            </div>
+            <div class="dx-axis-c"></div>
+            <div class="dx-axis-x">Lower setup effort</div>
+            <div class="dx-axis-x">Higher setup effort</div>
+          </div>
+        </section>
+
+        <section class="dx-sec">
+          <div class="dx-sec-head">
+            <p class="eyebrow">What this could change</p>
+            <h2>The same week, with one workflow doing the repetitive part</h2>
+          </div>
+          <div class="dx-ba">
+            <div>
+              <div class="dx-barow">
+                <p>Today</p>
+                <div class="dx-batrack"><span class="dx-bafill" id="dxBarToday"></span></div>
+                <p class="dx-bafig"><span id="dxToday">0</span> hours a week on manual coordination</p>
+              </div>
+              <div class="dx-barow">
+                <p>With a focused first automation</p>
+                <div class="dx-batrack"><span class="dx-bafill is-after" id="dxBarAfter"></span></div>
+                <p class="dx-bafig"><span id="dxAfterHrs">0</span> hours a week, freeing <span id="dxSaved">0</span></p>
+              </div>
+            </div>
+            <div class="dx-mult">
+              <div class="dx-multrow"><span>Per month</span><b><span id="dxMonth">0</span> hours</b></div>
+              <div class="dx-multrow"><span>Per year</span><b><span id="dxYear">0</span> hours</b></div>
+              <div class="dx-multrow"><span>Working days a year</span><b><span id="dxDays">0</span> days</b></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dx-sec">
+          <div class="dx-sec-head">
+            <p class="eyebrow">ROI calculator</p>
+            <h2>Estimated potential impact, on your numbers</h2>
+            <p>Prefilled from your answers. Change anything that does not match your business. All figures are estimates of potential, not a forecast.</p>
+          </div>
+
+          <div class="dx-calc">
+            <div class="dx-inputs">
+              <div class="dx-in">
+                <label for="cHours">Hours a week on the workflow you want to improve</label>
+                <input id="cHours" type="number" min="0" step="0.5" value="10">
+              </div>
+              <div class="dx-in">
+                <label for="cRate">Value of an hour of that time</label>
+                <div class="dx-seg">
+                  <button type="button" data-rate="100" class="is-on">Owner &middot; $100</button>
+                  <button type="button" data-rate="45">Team &middot; $45</button>
+                </div>
+                <input id="cRate" type="number" min="0" step="5" value="100">
+                <em>For a team member, use hourly pay plus taxes, benefits, insurance and overhead. Hourly pay &times; 1.3 is a reasonable starting point.</em>
+              </div>
+              <div class="dx-in">
+                <label for="cAssume">Assumptions</label>
+                <select id="cAssume">
+                  <option value="conservative">Conservative &middot; 25% automatable, 30% time removed</option>
+                  <option value="expected" selected>Expected &middot; 40% automatable, 50% time removed</option>
+                  <option value="ambitious">Ambitious &middot; 60% automatable, 70% time removed</option>
+                </select>
+              </div>
+
+              <label class="dx-toggle">
+                <input type="checkbox" id="cLeadsOn">
+                <span>Include the revenue effect
+                  <em>Only worth doing if you know your enquiry volume and conversion rate. Otherwise the time figures are the honest part.</em>
+                </span>
+              </label>
+
+              <div id="cLeadFields" hidden>
+                <div class="dx-two">
+                  <div class="dx-in">
+                    <label for="cEnq">Qualified enquiries a month</label>
+                    <input id="cEnq" type="number" min="0" step="1" value="20">
+                  </div>
+                  <div class="dx-in">
+                    <label for="cConv">Current conversion rate %</label>
+                    <input id="cConv" type="number" min="0" max="100" step="1" value="25">
+                  </div>
+                </div>
+                <div class="dx-in">
+                  <label for="cPts">Expected improvement, percentage points</label>
+                  <input id="cPts" type="number" min="0" max="20" step="1" value="2">
+                  <em>One to three points is realistic from faster response and consistent follow-up. Larger claims are not.</em>
+                </div>
+                <div class="dx-two">
+                  <div class="dx-in">
+                    <label for="cJob">Average job value</label>
+                    <input id="cJob" type="number" min="0" step="500" value="10000">
+                  </div>
+                  <div class="dx-in">
+                    <label for="cMargin">Gross margin %</label>
+                    <input id="cMargin" type="number" min="0" max="100" step="1" value="30">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dx-two">
+                <div class="dx-in">
+                  <label for="cOneTime">One-time build cost</label>
+                  <input id="cOneTime" type="number" min="0" step="500" value="6000">
+                </div>
+                <div class="dx-in">
+                  <label for="cMonthly">Monthly software and support</label>
+                  <input id="cMonthly" type="number" min="0" step="50" value="350">
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="dx-outs">
+                <div class="dx-out"><p>Time back</p><p class="dx-outval" id="oTime">&nbsp;</p></div>
+                <div class="dx-out"><p>Labour value a year</p><p class="dx-outval" id="oLabour">&nbsp;</p></div>
+                <div class="dx-out"><p>Gross profit potential</p><p class="dx-outval" id="oGp">&nbsp;</p></div>
+                <div class="dx-out"><p>Payback</p><p class="dx-outval" id="oPayback">&nbsp;</p></div>
+              </div>
+              <div class="dx-headline">
+                <span>Estimated first-year net value <b id="oNet">&nbsp;</b></span>
+                <span class="mono">Estimated ROI <b style="font-size:20px" id="oRoi">&nbsp;</b></span>
+              </div>
+              <div class="dx-chartwrap">
+                <svg id="dxChart" viewBox="0 0 560 170" role="img" aria-label="Cumulative value against investment over twelve months"></svg>
+                <div class="dx-legend">
+                  <span><i class="dx-swatch" aria-hidden="true"></i>Value recovered</span>
+                  <span><i class="dx-swatch is-inv" aria-hidden="true"></i>Investment</span>
+                </div>
+              </div>
+              <p class="dx-leadnote" id="oLeads">&nbsp;</p>
+              <details class="dx-details">
+                <summary>Assumptions used</summary>
+                <p id="oAssumeText">&nbsp;</p>
+                <p>Actual results depend on your current process, team adoption and the workflow selected. Revenue figures are potential gross profit, not guaranteed revenue, and use gross profit rather than turnover so the return is not overstated.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="dx-close">
+        <div class="dx-close-inner">
+          <div>
+            <p class="eyebrow">Recommended next step</p>
+            <h2>Start with <span id="dxNextTarget">&nbsp;</span></h2>
+            <p id="dxNextP">&nbsp;</p>
+            <p>On a 30-minute AI Operations Review we map this one workflow properly, check these assumptions against how your business actually runs, and tell you the simplest version worth building first. If the numbers do not hold up, we will say so.</p>
+            <div class="actions">
+              <a class="btn" href="../index.html#contact">Book the review</a>
+              <button class="dx-linkbtn" type="button" id="dxRestart">Start the diagnostic again</button>
+            </div>
+          </div>
+          <div>
+            <p class="dx-caveat">Your weakest area was <span id="dxWeakest">&nbsp;</span>, which is why the recommendation lands where it does. If you think that is wrong, it usually means one answer was read differently than intended, and it is worth saying so on the call. A diagnostic is a starting point for a conversation, not a verdict on the business.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="footer-brand" href="../index.html">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="footer-legal">Round Hill Entertainment LLC d/b/a Round Hill Consulting</span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="../privacy/">Privacy</a>
+      <a href="../sms-terms/">SMS terms</a>
+      <a href="../sms-consent/">SMS consent</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/diagnostic.js"></script>
+</body>
+</html>
