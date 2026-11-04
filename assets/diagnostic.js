@@ -3,11 +3,12 @@
   'use strict';
 
   /* ------------------------------------------------------------------
-     PASTE YOUR GOHIGHLEVEL INBOUND WEBHOOK URL HERE.
-     Until it is set, the diagnostic still works end to end — it just
-     does not send the lead anywhere.
+     Diagnostic submissions POST to the Cloudflare Pages Function at
+     /functions/api/diagnostic.js, which emails the report to the visitor
+     and a full lead copy to info@roundhillentertainment.com via Resend.
+     Needs RESEND_API_KEY (and CONTACT_FROM) in the Pages environment.
   ------------------------------------------------------------------ */
-  var GHL_WEBHOOK_URL = '';
+  var DIAGNOSTIC_ENDPOINT = '/api/diagnostic';
 
   var STORE = 'rhc-diagnostic-v1';
 
@@ -336,6 +337,7 @@
     var f = e.target;
     var name = f.name_.value.trim(), email = f.email.value.trim();
     var msg = $('dxGateMsg');
+    msg.className = 'dx-msg';
     if (!name || !email) { msg.textContent = 'Name and email are both needed to send the report.'; return; }
     if (f.phone.value.trim() && !f.consent.checked) {
       msg.textContent = 'Please tick the consent box, or leave the phone field blank.'; return;
@@ -352,37 +354,56 @@
       company: f.company.value.trim(),
       sms_consent: f.consent.checked,
       score: r.overall, band: VERDICTS[r.band].band,
+      verdict_head: VERDICTS[r.band].head,
+      verdict_body: VERDICTS[r.band].body,
+      verdict_move: VERDICTS[r.band].move,
+      verdict_unlock: VERDICTS[r.band].unlock,
       weekly_manual_hours: r.hours,
       recoverable_hours: Math.round(r.recover * 10) / 10,
       first_target: TARGETS[r.target].label,
+      first_target_body: TARGETS[r.target].body,
       weakest_area: r.weakest,
       area_scores: r.areas.reduce(function (o, a) { o[a.label] = a.pc; return o; }, {}),
+      areas: r.areas.map(function (a) { return { label: a.label, pc: a.pc }; }),
       answers: Q.map(function (q, i) {
         return { question: q.t, answer: state.answers[i] != null ? q.o[state.answers[i]] : null };
       })
     };
 
-    post(payload).then(function () {
+    post(payload).then(function (ok) {
+      btn.disabled = false; btn.textContent = 'Open my full report';
+      msg.className = 'dx-msg'; msg.textContent = '';
+
+      var sent = $('dxSentMsg');
+      if (sent) {
+        sent.hidden = false;
+        sent.className = 'dx-sentmsg' + (ok ? ' is-ok' : '');
+        sent.textContent = ok
+          ? 'A copy of this report is on its way to ' + email + '.'
+          : 'We could not email a copy just now. Your full report is below — email info@roundhillentertainment.com if you would like it sent over.';
+      }
+
       state.unlocked = true; save(); applyLock();
       var top = $('dxFull').getBoundingClientRect().top + window.pageYOffset - 20;
       window.scrollTo({ top: top, behavior: 'smooth' });
-    }).catch(function () {
-      /* never trap the user behind our own plumbing */
-      state.unlocked = true; save(); applyLock();
     });
   }
 
+  /* resolves true only when the visitor's copy actually went out; never
+     rejects, so the visitor is never trapped behind our own plumbing */
   function post(payload) {
-    if (!GHL_WEBHOOK_URL) return Promise.resolve();
-    var body = JSON.stringify(payload);
-    return fetch(GHL_WEBHOOK_URL, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body
-    }).catch(function () {
-      /* retry as a simple request when CORS preflight is refused */
-      return fetch(GHL_WEBHOOK_URL, {
-        method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: body
-      });
-    });
+    if (!DIAGNOSTIC_ENDPOINT) return Promise.resolve(false);
+    return fetch(DIAGNOSTIC_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (!r.ok && r.status !== 207) return false;
+      /* 207 = one of the two sends failed; sent[0] is the visitor's copy */
+      return r.json().then(function (b) {
+        return b && Array.isArray(b.sent) ? !!b.sent[0] : r.ok;
+      }).catch(function () { return r.ok; });
+    }).catch(function () { return false; });
   }
 
   /* ---------------- ROI calculator ---------------- */

@@ -115,10 +115,14 @@
 .dx-check{display:grid;grid-template-columns:18px minmax(0,1fr);gap:11px;align-items:start;font-size:12.5px;line-height:1.5;color:var(--dim)}
 .dx-check input{margin:2px 0 0;accent-color:var(--navy)}
 .dx-msg{font-size:13.5px;color:#8C3D24;min-height:1em}
+.dx-msg.is-ok{color:#1B7F58}
+.dx-sentmsg{font-size:13.5px;line-height:1.55;color:#8C3D24;padding:14px 18px;margin-bottom:26px;background:#FBF3EF;border:1px solid #E6D2C8}
+.dx-sentmsg.is-ok{color:#1B7F58;background:#F0F8F3;border-color:#CBE5D6}
 .dx-fineprint{font-size:12px;line-height:1.55;color:var(--mute)}
 .dx-gate .dx-form p{color:var(--dim)}
 .dx-gate .dx-form .dx-fineprint{color:var(--mute)}
 .dx-gate .dx-form .dx-msg{color:#8C3D24}
+.dx-gate .dx-form .dx-msg.is-ok{color:#1B7F58}
 .dx-gate .dx-check{color:var(--dim)}
 
 /* calculator */

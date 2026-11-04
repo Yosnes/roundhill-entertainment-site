@@ -165,4 +165,21 @@
   if (nf) nf.addEventListener('submit', function (e) {
     if (!nf.getAttribute('action')) { e.preventDefault(); nf.querySelector('button').textContent = 'Subscribed'; nf.querySelector('input').value = ''; }
   });
+  /* "Or send a note" — Formspree */
+  var rf = $('rhNote'), rbtn = $('rnBtn'), rerr = $('rnErr'), rdone = $('rhDone');
+  if (rf) rf.addEventListener('submit', function (e) {
+    e.preventDefault(); rerr.style.display = 'none';
+    if (!rf.checkValidity()) {
+      var bad = rf.querySelector(':invalid');
+      rerr.textContent = 'Please fill in your name, business, a valid email, a phone number, and a line about the problem.';
+      rerr.style.display = 'block'; if (bad) bad.focus(); return;
+    }
+    rbtn.disabled = true; rbtn.textContent = 'Sending\u2026';
+    fetch(rf.action, { method: 'POST', body: new FormData(rf), headers: { Accept: 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error('fail'); rf.style.display = 'none'; rdone.style.display = 'flex'; })
+      .catch(function () {
+        rerr.textContent = 'That did not go through. Email info@roundhillentertainment.com and we will pick it up from there.';
+        rerr.style.display = 'block'; rbtn.disabled = false; rbtn.textContent = 'Send note';
+      });
+  });
 })();
